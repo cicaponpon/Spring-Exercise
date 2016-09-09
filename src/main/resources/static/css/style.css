@@ -1,6 +1,10 @@
 .container{
-	margin: auto;
+	margin: 3% auto;
 	left: 25%;
+}
+
+.panel-body{
+	padding: 5%;
 }
 
 #add span{
