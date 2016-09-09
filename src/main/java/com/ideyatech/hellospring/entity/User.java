@@ -13,6 +13,8 @@ public class User {
 	
 	private String password;
 	
+	private String confirmPassword;
+	
 	private Date birthDate;
 	
 	private String role;
@@ -72,6 +74,15 @@ public class User {
 	public void setRole(String role) {
 		this.role = role;
 	}
+
+	public String getConfirmPassword() {
+		return confirmPassword;
+	}
+
+	public void setConfirmPassword(String confirmPassword) {
+		this.confirmPassword = confirmPassword;
+	}
+	
 	
 	
 	

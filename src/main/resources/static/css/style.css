@@ -7,3 +7,12 @@
 	font-size: 30px;
 	font-weight: bold;
 }
+
+.error-input{
+	border-color: red;
+}
+
+.error-message{
+	color: red;
+	font-style: italic;
+}
