@@ -31,8 +31,8 @@
 		    </thead>
 		    <tbody>
 		      	<c:forEach items="${user}" var="user">
-		      		<tr data-toggle="modal" data-target="#${user.id}">
-		      			<td> ${user.id} </a> </td>
+		      		<tr>
+		      			<td  data-toggle="modal" data-target="#${user.id}"> ${user.id} </a> </td>
 		      			<td>${user.lastName}, ${user.firstName} </td>
 		      		</tr>
 		      	</c:forEach>
