@@ -77,7 +77,6 @@ public class RegistrationController {
 		userRepository.save(user);
 		map.addAttribute("role", user.getRole());		
 		if(user.getRole().equals("admin")){
-//			return getUsersList(map); 
 			return new ModelAndView("redirect:/user/list");
 		}
 			return new ModelAndView("add-skills");

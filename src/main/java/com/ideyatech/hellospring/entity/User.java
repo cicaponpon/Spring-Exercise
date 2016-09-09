@@ -101,6 +101,10 @@ public class User extends BaseEntity{
 		this.confirmPassword = confirmPassword;
 	}
 	
+	@Override
+	public String toString() {
+		return "User [firstName=" + firstName + ", middleName=" + middleName + ", lastName=" + lastName + ", birthDate=" + birthDate+ ", email=" + email + ", role=" + role + "]";
+	}
 	
 	
 	

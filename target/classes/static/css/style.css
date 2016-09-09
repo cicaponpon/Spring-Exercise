@@ -20,3 +20,7 @@
 	color: red;
 	font-style: italic;
 }
+
+table.borderless td{
+	border: none !important;
+}

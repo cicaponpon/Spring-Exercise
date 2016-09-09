@@ -17,9 +17,9 @@
 </head>
 <body>
 	<div class="container"><h1>ADD USER
-		 <button id="addUser" type="button" class="btn btn-success">
+		 <a id="addUser" type="button" class="btn btn-success" href="/user">
 	    	<span class="glyphicon glyphicon-plus"></span> 
-	  	</button></h1>
+	  	</a></h1>
 	  	
 		<table class="table table-striped">
 		    <thead>
@@ -31,62 +31,62 @@
 		    <tbody>
 		      	<c:forEach items="${user}" var="user">
 		      		<tr>
-		      			<td> <a href=""> ${user.id} </a> </td>
+		      			<td data-toggle="modal" data-target="#${user.id}"> ${user.id} </a> </td>
 		      			<td>${user.lastName}, ${user.firstName} </td>
 		      		</tr>
 		      	</c:forEach>
 		    </tbody>
 		  </table>
 	</div>
+			<c:forEach items="${user}" var="user">
+				    <!-- MODAL -->
+					<div class="modal fade" tabindex="-1" role="dialog" id="${user.id}">
+					  <div class="modal-dialog" role="document">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					        <h4 class="modal-title">User Information</h4>
+					      </div>
+					      
+					      <div class="modal-body">
+					           <table class="table borderless">
+							    <tbody>
+							      	<tr>
+							      		<td><b>FIRST NAME: </b></td>
+							      		<td>${user.firstName}</td>
+							      	</tr>
+							      	<tr>
+							      		<td><b>MIDDLE NAME: </b></td>
+							      		<td>${user.middleName}</td>
+							      	</tr>
+							      	<tr>
+							      		<td><b>LAST NAME: </b></td>
+							      		<td>${user.lastName}</td>
+							      	</tr>
+							      	<tr>
+							      		<td><b>EMAIL: </b></td>
+							      		<td>${user.email}</td>
+							      	</tr>
+							      	<tr>
+							      		<td><b>BIRTHDAY: </b></td>
+							      		<td>${user.birthDate}</td>
+							      	</tr>
+							      	<tr>
+							      		<td><b>ROLE: </b></td>
+							      		<td>${user.role}</td>
+							      	</tr>
+							      	
+							    </tbody>
+							  </table>
+					      </div>
+					      
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					      </div>
+					    </div><!-- /.modal-content -->
+					  </div><!-- /.modal-dialog -->
+				</div><!-- /.modal -->		
+			</c:forEach>
 	
-	 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#tweet1">  <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Tweet </button>
-	
-	<!-- MODAL -->
-		<div class="modal fade" tabindex="-1" role="dialog" id="tweet1">
-		  <div class="modal-dialog" role="document">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		        <h4 class="modal-title">User Information</h4>
-		      </div>
-		      
-		      <div class="modal-body">
-		           <table class="table table-striped">
-				    <tbody>
-				      	<tr>
-				      		<td>FIRST NAME: </td>
-				      		<td> </td>
-				      	</tr>
-				      	<tr>
-				      		<td>MIDDLE NAME: </td>
-				      		<td> </td>
-				      	</tr>
-				      	<tr>
-				      		<td>LAST NAME: </td>
-				      		<td> </td>
-				      	</tr>
-				      	<tr>
-				      		<td>EMAIL: </td>
-				      		<td> </td>
-				      	</tr>
-				      	<tr>
-				      		<td>BIRTHDAY: </td>
-				      		<td> </td>
-				      	</tr>
-				      	<tr>
-				      		<td>ROLE: </td>
-				      		<td> </td>
-				      	</tr>
-				      	
-				    </tbody>
-				  </table>
-		      </div>
-		      
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		      </div>
-		    </div><!-- /.modal-content -->
-		  </div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
 </body>
 </html>
