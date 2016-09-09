@@ -77,10 +77,19 @@ public class RegistrationController {
 		userRepository.save(user);
 		map.addAttribute("role", user.getRole());		
 		if(user.getRole().equals("admin")){
-//			return getUsersList(map); 
 			return new ModelAndView("redirect:/user/list");
 		}
 			return new ModelAndView("add-skills");
 	}
+		
+//	@RequestMapping(value="/addUser", method = RequestMethod.POST)
+//	public ModelAndView submitForm() {
+//		return new ModelAndView("redirect:/user");
+//	}
+	 @RequestMapping(value = "/addUser", method = RequestMethod.GET)
+	   public String redirect() {
+	     
+	      return "redirect:/user";
+	   }
 
 }

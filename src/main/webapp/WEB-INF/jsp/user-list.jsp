@@ -16,10 +16,13 @@
 	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div class="container"><h1>ADD USER
-		 <button id="addUser" type="button" class="btn btn-success">
-	    	<span class="glyphicon glyphicon-plus"></span> 
-	  	</button></h1>
+	<div class="container">
+	
+		<form:form modelAttribute="user" action="/addUser" method="POST">
+			<button id="addUser" type="button" class="btn btn-success">
+		    	 <span class="glyphicon glyphicon-user"></span> ADD USER  
+		  	</button>
+	  	</form:form>
 	  	
 		<table class="table table-striped">
 		    <thead>
