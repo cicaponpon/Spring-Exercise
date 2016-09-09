@@ -15,7 +15,7 @@
 </head>
 <body>
 	<div class="container container col-md-6 col-xs-6">
-		 <button id="addUser" type="button" class="btn btn-success">
+		 <button id="addSkill" type="button" class="btn btn-success">
 	    	 <span class="glyphicon glyphicon-plus"></span> ADD SKILL  
 	  	</button>
   	<hr />

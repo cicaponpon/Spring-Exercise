@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
 	
-}).on('click','#add',function(){
+}).on('click','#addSkill',function(){
 	$('#skillRows').append(
 			"<tr>" +
 			"<td><input class='form-control' name='skill'/></td>" +
