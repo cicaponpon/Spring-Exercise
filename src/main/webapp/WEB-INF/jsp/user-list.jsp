@@ -17,9 +17,7 @@
 </head>
 <body>
 
-	<div class="container">
-	
-		
+	<div class="container col-md-6 col-xs-6">
 			<a id="addUser" type="button" class="btn btn-success" href="/user">
 		    	 <span class="glyphicon glyphicon-user"></span> ADD USER  
 		  	</a>
@@ -36,6 +34,7 @@
 		      	<c:forEach items="${user}" var="user">
 		      		<tr>
 		      			<td data-toggle="modal" data-target="#${user.id}"> ${user.id} </td>
+		      			<td> ${user.id} </td>
 		      			<td>${user.lastName}, ${user.firstName} </td>
 		      			<td><button data-toggle="modal" data-target="#skill" class="btn btn-success"><span class="glyphicon glyphicon-list"></span></button></td>
 		      		</tr>
