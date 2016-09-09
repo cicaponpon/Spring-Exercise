@@ -79,8 +79,9 @@ public class RegistrationController {
 		if(user.getRole().equals("admin")){
 			return new ModelAndView("redirect:/user/list");
 		}
-			return new ModelAndView("add-skills");
+			return new ModelAndView("redirect:/skill");
 	}
+
 
 
 }

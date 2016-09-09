@@ -34,7 +34,6 @@
 		      	<c:forEach items="${user}" var="user">
 		      		<tr>
 		      			<td data-toggle="modal" data-target="#${user.id}"> ${user.id} </td>
-		      			<td> ${user.id} </td>
 		      			<td>${user.lastName}, ${user.firstName} </td>
 		      			<td><button data-toggle="modal" data-target="#skill" class="btn btn-success"><span class="glyphicon glyphicon-list"></span></button></td>
 		      		</tr>
