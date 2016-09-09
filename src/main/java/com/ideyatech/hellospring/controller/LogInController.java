@@ -22,8 +22,7 @@ public class LogInController {
 	
 	@RequestMapping(value="/login", method = RequestMethod.POST)
 	public ModelAndView submitForm(@ModelAttribute User user) {
-		System.out.println("LOG IN!");
-	
+		System.out.println("LOG IN!");	
 		return new ModelAndView("redirect:/user");
 	}
 

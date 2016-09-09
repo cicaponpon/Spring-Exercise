@@ -16,10 +16,13 @@
 	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div class="container"><h1>ADD USER
-		 <a id="addUser" type="button" class="btn btn-success" href="/user">
-	    	<span class="glyphicon glyphicon-plus"></span> 
-	  	</a></h1>
+
+	<div class="container">
+	
+		
+			<a id="addUser" type="button" class="btn btn-success" href="/user">
+		    	 <span class="glyphicon glyphicon-user"></span> ADD USER  
+		  	</a>
 	  	
 		<table class="table table-striped">
 		    <thead>
