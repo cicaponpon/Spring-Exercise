@@ -29,13 +29,15 @@
 		      <tr>
 		      	<th> ID </th>
 		        <th> NAME </th>
+		        <th> SKILLS </th>
 		      </tr>
 		    </thead>
 		    <tbody>
 		      	<c:forEach items="${user}" var="user">
 		      		<tr>
-		      			<td data-toggle="modal" data-target="#${user.id}"> ${user.id} </a> </td>
+		      			<td data-toggle="modal" data-target="#${user.id}"> ${user.id} </td>
 		      			<td>${user.lastName}, ${user.firstName} </td>
+		      			<td><button data-toggle="modal" data-target="#skill" class="btn btn-success"><span class="glyphicon glyphicon-list"></span></button></td>
 		      		</tr>
 		      	</c:forEach>
 		    </tbody>
@@ -90,6 +92,40 @@
 					  </div><!-- /.modal-dialog -->
 				</div><!-- /.modal -->		
 			</c:forEach>
+				    <!-- MODAL -->
+					<div class="modal fade" tabindex="-1" role="dialog" id="skill">
+					  <div class="modal-dialog" role="document">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					        <h4 class="modal-title">User Skills</h4>
+					      </div>
+					      
+					      <div class="modal-body">
+								 <button id="addSkill" type="button" class="btn btn-success">
+							    	 <span class="glyphicon glyphicon-plus"></span> ADD SKILL  
+							  	</button>
+							  	<hr />
+							  	<table class="table table-striped">
+								    <thead>
+								      <tr>
+								        <th>Skill</th>
+								        <th>Rating</th>
+								        <th></th>
+								      </tr>
+								    </thead>
+								    <tbody id="skillRows">
+								      
+								    </tbody>
+								</table>
+					      </div>
+					      
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					      </div>
+					    </div><!-- /.modal-content -->
+					  </div><!-- /.modal-dialog -->
+				</div><!-- /.modal -->		
 	
 </body>
 </html>

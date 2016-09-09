@@ -44,9 +44,9 @@ public class RegistrationController {
 		return "registration-form";
 	}
 	
-	@RequestMapping(value="/user/{id}")
-	public @ResponseBody String getUser(@PathVariable("id") Long id){
-		return userRepository.findOne(id).toString();
+	@RequestMapping(value="/user/{id}",produces = {"application/json"})
+	public @ResponseBody User getUser(@PathVariable("id") Long id){
+		return userRepository.findOne(id);
 	}
 
 	@RequestMapping(value="/user/list")
@@ -82,5 +82,6 @@ public class RegistrationController {
 			return new ModelAndView("add-skills");
 	}
 	
+
 
 }
