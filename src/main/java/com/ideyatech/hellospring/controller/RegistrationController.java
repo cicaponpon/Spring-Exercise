@@ -28,7 +28,7 @@ public class RegistrationController {
 	}
 	@InitBinder
 	public void initBinder(WebDataBinder binder){
-		binder.registerCustomEditor(Date.class, new CustomDateEditor(new SimpleDateFormat("MM/dd/yyyy"),true));
+		binder.registerCustomEditor(Date.class, new CustomDateEditor(new SimpleDateFormat("yyyy-MM-dd"),true));
 	}
 	@RequestMapping(value="/user", method = RequestMethod.POST)
 	public ModelAndView submitForm(@ModelAttribute User user, ModelMap map) {

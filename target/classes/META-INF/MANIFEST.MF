@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Implementation-Title: Hello Spring
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: HP-Pavilion-g4
+Built-By: Katherine
 Implementation-Vendor-Id: com.ideyatech
 Build-Jdk: 1.8.0_101
 Implementation-URL: http://projects.spring.io/spring-boot/hello-spring
