@@ -17,7 +17,7 @@
 </head>
 <body>
 
-	<div class="container">
+	<div class="container col-md-6 col-xs-6">
 			<a id="addUser" type="button" class="btn btn-success" href="/user">
 		    	 <span class="glyphicon glyphicon-user"></span> ADD USER  
 		  	</a>
@@ -31,8 +31,8 @@
 		    </thead>
 		    <tbody>
 		      	<c:forEach items="${user}" var="user">
-		      		<tr>
-		      			<td data-toggle="modal" data-target="#${user.id}"> ${user.id} </a> </td>
+		      		<tr data-toggle="modal" data-target="#${user.id}">
+		      			<td> ${user.id} </a> </td>
 		      			<td>${user.lastName}, ${user.firstName} </td>
 		      		</tr>
 		      	</c:forEach>
