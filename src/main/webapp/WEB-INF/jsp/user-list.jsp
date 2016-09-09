@@ -18,8 +18,6 @@
 <body>
 
 	<div class="container">
-	
-		
 			<a id="addUser" type="button" class="btn btn-success" href="/user">
 		    	 <span class="glyphicon glyphicon-user"></span> ADD USER  
 		  	</a>
