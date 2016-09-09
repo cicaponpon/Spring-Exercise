@@ -50,10 +50,10 @@ public class RegistrationController {
 	}
 
 	@RequestMapping(value="/user/list")
-	public String getUsersList(ModelMap map){
+	public ModelAndView getUsersList(ModelMap map){
 		List<User> users = userRepository.findAll();
 		map.addAttribute("user", users);
-		return null;
+		return new ModelAndView("user-list"); 
 	}
 	
 	@InitBinder
@@ -77,7 +77,8 @@ public class RegistrationController {
 		userRepository.save(user);
 		map.addAttribute("role", user.getRole());		
 		if(user.getRole().equals("admin")){
-			return new ModelAndView("registration-form"); 
+//			return getUsersList(map); 
+			return new ModelAndView("redirect:/user/list");
 		}
 			return new ModelAndView("add-skills");
 	}

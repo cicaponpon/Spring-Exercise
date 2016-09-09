@@ -9,3 +9,7 @@ $(document).ready(function(){
 			"<td><input class='btn btn-primary' type='submit' value='Save'></td>" +
 			"</tr>")
 });
+
+$('#myModal').on('shown.bs.modal', function () {
+	  $('#myInput').focus()
+})

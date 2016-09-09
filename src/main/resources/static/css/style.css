@@ -7,7 +7,7 @@
 	padding: 5%;
 }
 
-#add span{
+#add span, #addUser span{
 	font-size: 30px;
 	font-weight: bold;
 }

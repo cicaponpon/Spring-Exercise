@@ -24,7 +24,7 @@ public class LogInController {
 	public ModelAndView submitForm(@ModelAttribute User user) {
 		System.out.println("LOG IN!");
 	
-		return new ModelAndView("registration-form");
+		return new ModelAndView("redirect:/user");
 	}
 
 }
